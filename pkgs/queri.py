@@ -21,7 +21,7 @@ def IRSA_search(mission, ra, dec, radius):
     df = table.to_df('pandas')
     save= input("Would you like to save the output? [y/N]")
     if save == "y" or save == 'yes':
-        df.to_csv("/querioutput.csv")
+        df.to_csv("\\querioutput.csv")
     else:
         print("Result not saved.")
         
