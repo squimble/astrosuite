@@ -36,7 +36,7 @@ def search(table, ra_upper, ra_lower, north):
     print(candidates)
     save= input("Would you like to save the output? [y/N]")
     if save == "y" or save == 'yes':
-        candidates.to_csv("/xfindoutput.csv")
+        candidates.to_csv("\\xfindoutput.csv")
     else:
         print("Result not saved.")
     
