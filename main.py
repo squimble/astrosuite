@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+#import the packages
 import argparse
 import pkgs.xfind as xfind
 import pkgs.xtable as xtable
