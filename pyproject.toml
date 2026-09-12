@@ -13,16 +13,16 @@ authors = [
 	{name='Dylan \"squimble"\ W.'} 
 ]
 classifiers =[
-	"Programming Language :: Python :: 3"
-	"License :: OSI Approved :: MIT License"
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: MIT License",
 	#sorry for not making it work with Windows :(
 	"Operating System :: POSIX :: Linux"
 ]
 dependencies = [
-	"astropy>=8.0"
+	"astropy>=8.0",
 	#this may be redundant, but i could honestly not care
 	#better to be safe than sorry
-	"astroquery>=0.4"
+	"astroquery>=0.4",
 	"pandas>=2.00"
 ]
 
