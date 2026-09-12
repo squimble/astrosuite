@@ -3,7 +3,7 @@
 #import the packages
 import argparse
 import pkgs.xfind as xfind
-import pkgs.xtable as xtable
+import pkgs.table as xtable
 import pkgs.queri as queri
 
 parser=argparse.ArgumentParser(description="Suite of astronomy-research focused tools, launchable via terminal")
