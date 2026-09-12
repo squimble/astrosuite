@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "AstroSuite"
+version = "1.00-r"
+description = "Astronomy research-focused software collection written in Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+	{name='Dylan "squimble" W.'} 
+]
+classifiers =[
+	"Programming Language :: Python :: 3"
+	"License :: MIT License"
+	#sorry for not making it work with Windows :(
+	"Operating System :: POSIX :: Linux"
+]
+dependencies = [
+	"astropy>=8.0"
+	#this may be redundant, but i could honestly not care
+	#better to be safe than sorry
+	"astroquery>=0.4"
+	"pandas>=3.05"
+]
+
+[project.scripts]
+astrosuite = "main:main"
+
