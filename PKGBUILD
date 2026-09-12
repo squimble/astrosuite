@@ -46,7 +46,7 @@ prepare(){
 
 	
 EOF
-
+	echo -e  "\e[0m"
 
 }
 
