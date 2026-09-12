@@ -1,16 +1,16 @@
 _pkgname=astrosuite
 pkgname=python+$_pkgname
-pkgver=1.00-r
+pkgver=1.00r
 pkgrel=1
 pkgdesc="Astronomy research-focused software collection written in Python"
 arch=('any')
 url="https://github.com/squimble/astrosuite/tree/main"
 license=('MIT')
 depends=('python')
-makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setup')
+makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setuptools')
 provides=("${pkgname%}")
 conflicts=("${pkgname%}")
-source=("git+%{https://github.com/squimble/astrosuite}.git#branch=main")
+source=("git+https://github.com/squimble/astrosuite.git#branch=main")
 md5sums=('SKIP')
 
 build(){
