@@ -14,13 +14,13 @@ source=("git+%{https://github.com/squimble/astrosuite}.git#branch=main")
 md5sums=('SKIP')
 
 build(){
-	cd "$_pkgname-$pkgver"
+	cd "$_pkgname"
 	python -m build --wheel --no-isolation
 
 }
 
 package(){
-	cd "$_pkgname-$pkgver"
+	cd "$_pkgname"
 	python -m installer --destdir="$pkgdir" dist/*.whl
 
 	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
