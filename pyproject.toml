@@ -4,17 +4,17 @@ build-backend = "hatchling.build"
 
 [project]
 name = "AstroSuite"
-version = "1.00-r"
+version = "1.00r"
 description = "Astronomy research-focused software collection written in Python"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [
-	{name='Dylan "squimble" W.'} 
+	{name='Dylan \"squimble"\ W.'} 
 ]
 classifiers =[
 	"Programming Language :: Python :: 3"
-	"License :: MIT License"
+	"License :: OSI Approved :: MIT License"
 	#sorry for not making it work with Windows :(
 	"Operating System :: POSIX :: Linux"
 ]
@@ -23,9 +23,12 @@ dependencies = [
 	#this may be redundant, but i could honestly not care
 	#better to be safe than sorry
 	"astroquery>=0.4"
-	"pandas>=3.05"
+	"pandas>=2.00"
 ]
 
 [project.scripts]
-astrosuite = "main:main"
+astrosuite = "astrosuite.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/astrosuite", "astrosuite"]
 
