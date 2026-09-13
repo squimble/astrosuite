@@ -27,8 +27,8 @@ dependencies = [
 ]
 
 [project.scripts]
-astrosuite = "main:main"
+astrosuite = "astrosuite.main:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/astrosuite", "astrosuite"]
+packages = ["astrosuite"]
 
