@@ -39,7 +39,7 @@ prepare(){
 
 
 		Building from GitHub repo...
-		But first, Installing required python dependencies!
+		But first, Installing required python dependencies via AUR and pip! :)
 		Thanks for installing astrosuite!
                                                                                                                                         
                                                                                                                                         
@@ -49,6 +49,7 @@ prepare(){
 	
 EOF
 	echo -e  "\e[0m"
+	yay -S python-pyvo
 	pip install --target='vendor' astroquery
 	yay -S python-astroquery
 	pip install --target='vendor' astropy
@@ -59,6 +60,15 @@ EOF
 }
 
 build(){
+	echo -e 
+	cat << "EOF"
+
+	Beginning build process... (If you got here, either you are very patient or lucky)
+	Thanks for being patient! 
+	(During full version updates of astrosuite, run pacman -R python+astrosuite to remove, before running makepkg -si in the cloned dir.)
+
+	
+EOF
 	cd "$_pkgname"
 	python -m build --wheel --no-isolation
 
