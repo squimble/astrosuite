@@ -54,9 +54,9 @@ EOF
 	pip install --target='vendor' astroquery
 	PIP_NO_BUILD_ISOLATION=0 yay -S python-astroquery
 	pip install --target='vendor' astropy
-	pacman -S python-astropy
+	sudo pacman -S python-astropy
 	pip install --target='vendor' pandas
-	pacman -S python-pandas
+	sudo pacman -S python-pandas
 	pip uninstall setuptools
 
 }
