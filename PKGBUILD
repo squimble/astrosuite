@@ -6,8 +6,8 @@ pkgdesc="Astronomy research-focused software collection written in Python"
 arch=('any')
 url="https://github.com/squimble/astrosuite/tree/main"
 license=('MIT')
-depends=('python' 'python-pandas' 'python-astropy' 'python-astroquery')
-makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setuptools')
+depends=('python')
+makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setuptools' 'python-pip')
 provides=("${pkgname%}")
 conflicts=("${pkgname%}")
 source=("git+https://github.com/squimble/astrosuite.git#branch=main")
