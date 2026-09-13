@@ -50,12 +50,14 @@ prepare(){
 EOF
 	echo -e  "\e[0m"
 	yay -S python-pyvo
+	pip install "setuptools<=80.10.2" --break-system-packages
 	pip install --target='vendor' astroquery
-	yay -S python-astroquery
+	PIP_NO_BUILD_ISOLATION=0 yay -S python-astroquery
 	pip install --target='vendor' astropy
 	pacman -S python-astropy
 	pip install --target='vendor' pandas
 	pacman -S python-pandas
+	pip uninstall setuptools
 
 }
 
