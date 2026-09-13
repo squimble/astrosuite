@@ -50,8 +50,11 @@ prepare(){
 EOF
 	echo -e  "\e[0m"
 	pip install --target='vendor' astroquery
+	yay -S python-astroquery
 	pip install --target='vendor' astropy
+	pacman -S python-astropy
 	pip install --target='vendor' pandas
+	pacman -S python-pandas
 
 }
 
