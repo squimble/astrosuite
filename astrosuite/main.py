@@ -2,9 +2,9 @@
 
 #import the packages
 import argparse
-import xfind as xfind
-import table as xtable
-import queri as queri
+from astrosuite.pkgs import xfind as xfind
+from astrosuite.pkgs import table as xtable
+from astrosuite.pkgs import queri as queri
 
 parser=argparse.ArgumentParser(description="Suite of astronomy-research focused tools, launchable via terminal")
 parser.add_argument("--xfind",action="store_true",help="Tool to help find whether an object fits within a Right Ascension and Declination limit.")
