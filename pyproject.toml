@@ -30,5 +30,5 @@ dependencies = [
 astrosuite = "astrosuite.main:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["astrosuite"]
+packages = ["astrosuite", "astrosuite/pkgs"]
 
