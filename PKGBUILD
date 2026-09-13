@@ -14,6 +14,7 @@ source=("git+https://github.com/squimble/astrosuite.git#branch=main")
 md5sums=('SKIP')
 
 prepare(){
+	cd "$_pkgname"
 	echo -e "\033[255;145;0m"
 	cat << "EOF"
 
@@ -38,6 +39,7 @@ prepare(){
 
 
 		Building from GitHub repo...
+		But first, Installing required python dependencies!
 		Thanks for installing astrosuite!
                                                                                                                                         
                                                                                                                                         
@@ -47,6 +49,9 @@ prepare(){
 	
 EOF
 	echo -e  "\e[0m"
+	pip install --target='vendor' astroquery
+	pip install --target='vendor' astropy
+	pip install --target='vendor' pandas
 
 }
 
