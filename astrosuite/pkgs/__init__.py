@@ -1,4 +1,4 @@
-from . queri import queri
-from . table import table
-from . xfind import xfind
+from .  import queri
+from .  import table
+from .  import xfind
 __all__ = ["queri", "xfind", "table"]
