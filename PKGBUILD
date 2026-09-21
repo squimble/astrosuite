@@ -6,7 +6,7 @@ pkgdesc="Astronomy research-focused software collection written in Python"
 arch=('any')
 url="https://github.com/squimble/astrosuite/tree/main"
 license=('MIT')
-depends=('python')
+depends=('python', 'python-pandas','python-astropy','python-astroquery','python-pyvo')
 makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setuptools' 'python-pip')
 provides=("${pkgname%}")
 conflicts=("${pkgname%}")
@@ -39,8 +39,8 @@ prepare(){
 
 
 		Building from GitHub repo...
-		But first, Installing required python dependencies via AUR and pip! :)
-		Thanks for installing astrosuite!
+		But first, Installing required python dependencies...
+		Thanks for installing astrosuite! :)
                                                                                                                                         
                                                                                                                                         
                                                                                                                                         
@@ -49,16 +49,16 @@ prepare(){
 	
 EOF
 	echo -e  "\e[0m"
-	yay -S python-pyvo
-	pip install "setuptools<=80.10.2" --break-system-packages
-	pip install --target='vendor' astroquery
-	PIP_NO_BUILD_ISOLATION=0 yay -S python-astroquery
+	#yay -S python-pyvo
+	#pip install "setuptools<=80.10.2" --break-system-packages
+	#pip install --target='vendor' astroquery
+	#PIP_NO_BUILD_ISOLATION=0 yay -S python-astroquery
 	# lowk gon change this for now
 	#pip install --target='vendor' astropy --break-system-packages
-	sudo pacman -S python-astropy
+	#sudo pacman -S python-astropy
 	#pip install --target='vendor' pandas --break-system-packages
-	sudo pacman -S python-pandas
-	pip uninstall setuptools
+	#sudo pacman -S python-pandas
+	#pip uninstall setuptools
 
 }
 
